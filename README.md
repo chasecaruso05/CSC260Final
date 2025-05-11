@@ -1,18 +1,20 @@
-## Getting Started
+## Our Project
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Two parts: the calendar and note taker.
 
-## Folder Structure
+## Calendar
 
-The workspace contains two folders by default, where:
+Click a specific day to add an event
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- See a day's events by clicking `No`
+- Add more events by clicking `Yes`
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+All days with events scheduled will be marked in orange on the calendar
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+> Events stored in an arraylist, bound inside individual hash map elements for each day.
+> Arraylist allows for multiple events in one day
+> Hashmap allows for easy storage and lookup by a day's epoch number
 
-## Dependency Management
+## Note Taker
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+Allows simple storage of non date dependant tasks.
