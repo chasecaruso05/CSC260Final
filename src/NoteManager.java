@@ -24,6 +24,24 @@ public class NoteManager extends JFrame {
 
         add(panel);
 
+        // Save function
+        saveButton.addActionListener(e -> {
+            String title = titleField.getText();
+            String content = textArea.getText();
+            notes.put(title, content);
+            JOptionPane.showMessageDialog(this, "Note saved.");
+        });
+
+        // Load function
+        loadButton.addActionListener(e -> {
+            String title = titleField.getText();
+            if (notes.containsKey(title)) {
+                textArea.setText(notes.get(title));
+            } else {
+                JOptionPane.showMessageDialog(this, "Note not found.");
+            }
+        });
+
         setTitle("Note Manager");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         pack();
